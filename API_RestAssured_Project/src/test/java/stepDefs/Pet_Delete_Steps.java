@@ -30,8 +30,9 @@ public class Pet_Delete_Steps {
 			   
 	}
 
-	@Then("Status code as {int}")
+	@And("Status code as {int}")
 	public void status_code_as(Integer int1) {
+		System.out.println("Then statement initiated");
 		resp.then().statusCode(200);
 		 Assert.assertEquals(200, resp.getStatusCode());
 	}
